@@ -124,16 +124,7 @@ export default async function BrowsePage({
             </nav>
           </Reveal>
 
-          {dbError ? (
-            <div className="empty">
-              <p>
-                The catalogue can&apos;t be reached. Set{" "}
-                <code>DATABASE_URL</code>, then run <code>npm run db:push</code>{" "}
-                and <code>npm run db:seed</code>.
-              </p>
-              <p className="mono">{dbError}</p>
-            </div>
-          ) : catalogue.length === 0 ? (
+          {catalogue.length === 0 ? (
             <div className="empty">
               <p>Nothing published on this platform yet.</p>
               <p>
